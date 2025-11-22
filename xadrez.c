@@ -1,16 +1,20 @@
 #include <stdio.h>
 
+void moverTorre(int movTorre) {
+    if(movTorre > 0) {
+        printf("Cima\n");
+        moverTorre(movTorre -1);     
+    }    
+}
+
 int main() {
 
-    int numb = 1;
+    int numb = 5;
 
     // Movimentação da Torre
     printf("Torre\n");
     printf("\n");
-    while (numb <= 5) {
-        numb++;
-        printf("Cima\n");
-    }
+    moverTorre(numb);
 
     printf("\n");
 
@@ -41,9 +45,9 @@ int main() {
     int j;
     do {
         for (j = 0; j < 2; j++) {
-            printf("Baixo\n");
+            printf("Cima\n");
         }
-        printf("Esquerda\n");
+        printf("Direita\n");
     } while (j <= 1);
 
     return 0;
